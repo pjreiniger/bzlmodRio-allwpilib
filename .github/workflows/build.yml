@@ -6,7 +6,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - { os: windows-latest }
+        - { os: windows-latest, config: "--config=windows" }
+        - { os: ubuntu-latest, config: "--config=linux" }
+        - { os: macos-latest, config: "--config=macos" }
     name: "Build Tests - ${{ matrix.name }}"
     runs-on: ${{ matrix.os }}
     steps:
