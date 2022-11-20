@@ -9,9 +9,8 @@ jobs:
         - { os: windows-latest, config: "--config=windows" }
         - { os: ubuntu-latest, config: "--config=linux" }
         - { os: macos-latest, config: "--config=macos" }
-    name: "Build Tests - ${{ matrix.name }}"
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
-    - run: bazel build //...:* -k --verbose_failures
+    - run: bazel build //... -k ${{ matrix.config }} --verbose_failures
       working-directory: tests

@@ -9,8 +9,8 @@ cc_library(
         "@allwpilib//dependencies/cpp/ntcore",
     ] + select({
         "@bazel_tools//src/conditions:windows": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64//:shared_libs"],
-        "@bazel_tools//src/conditions:linux_x86_64": ["@halsim_gui-linuxx86-64//:shared_libs"],
-        "@bazel_tools//src/conditions:darwin": ["@halsim_gui-osxx86-64//:shared_libs"],
-        # "//constraints/is_roborio:roborio": ["@halsim_gui-linuxathena//:shared_libs"],
+        "@bazel_tools//src/conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64//:shared_libs"],
+        "@bazel_tools//src/conditions:darwin": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_osxx86-64//:shared_libs"],
+        # "//constraints/is_roborio:roborio": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxathena//:shared_libs"],
     }),
 )

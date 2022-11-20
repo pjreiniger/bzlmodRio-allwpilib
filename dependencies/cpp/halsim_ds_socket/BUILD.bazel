@@ -8,8 +8,8 @@ cc_library(
         "@allwpilib//dependencies/cpp/wpinet",
     ] + select({
         "@bazel_tools//src/conditions:windows": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86-64//:shared_libs"],
-        "@bazel_tools//src/conditions:linux_x86_64": ["@halsim_ds_socket-linuxx86-64//:shared_libs"],
-        "@bazel_tools//src/conditions:darwin": ["@halsim_ds_socket-osxx86-64//:shared_libs"],
-        # "//constraints/is_roborio:roborio": ["@halsim_ds_socket-linuxathena//:shared_libs"],
+        "@bazel_tools//src/conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxx86-64//:shared_libs"],
+        "@bazel_tools//src/conditions:darwin": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_osxx86-64//:shared_libs"],
+        # "//constraints/is_roborio:roborio": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxathena//:shared_libs"],
     }),
 )
