@@ -1,0 +1,14 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+
+java_library(
+    name = "wpimath",
+    visibility = ["//visibility:public"],
+    exports = [
+        artifact("edu.wpi.first.wpimath:wpimath-java"),
+        "@allwpilib//dependencies/java/wpiutil",
+        "@allwpilib//dependencies/cpp/wpiutil:jni",
+        "@allwpilib//dependencies/cpp/wpimath:jni",
+        artifact("org.ejml:ejml-simple"),
+    ],
+)

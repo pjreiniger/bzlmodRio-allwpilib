@@ -1,0 +1,11 @@
+cc_library(
+    name = "halsim_gui",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = ["@allwpilib//dependencies/cpp/hal", "@allwpilib//dependencies/cpp/wpiutil", "@allwpilib//dependencies/cpp/wpinet", "@allwpilib//dependencies/cpp/ntcore"] + select({
+        "@bazel_tools//src/conditions:windows": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64//:shared_libs"],
+        "@bazel_tools//src/conditions:linux_x86_64": ["@halsim_gui-linuxx86-64//:shared_libs"],
+        "@bazel_tools//src/conditions:darwin": ["@halsim_gui-osxx86-64//:shared_libs"],
+        # "//constraints/is_roborio:roborio": ["@halsim_gui-linuxathena//:shared_libs"],
+    }),
+)

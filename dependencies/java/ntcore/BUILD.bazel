@@ -1,0 +1,15 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+
+java_library(
+    name = "ntcore",
+    visibility = ["//visibility:public"],
+    exports = [
+        artifact("edu.wpi.first.ntcore:ntcore-java"),
+        "@allwpilib//dependencies/java/wpiutil",
+        "@allwpilib//dependencies/cpp/wpiutil:jni",
+        "@allwpilib//dependencies/java/wpinet",
+        "@allwpilib//dependencies/cpp/wpinet:jni",
+        "@allwpilib//dependencies/cpp/ntcore:jni",
+    ],
+)

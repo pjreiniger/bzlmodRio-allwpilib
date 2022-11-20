@@ -1,0 +1,19 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+
+java_library(
+    name = "cameraserver",
+    visibility = ["//visibility:public"],
+    exports = [
+        artifact("edu.wpi.first.cameraserver:cameraserver-java"),
+        "@allwpilib//dependencies/java/wpiutil",
+        "@allwpilib//dependencies/cpp/wpiutil:jni",
+        "@allwpilib//dependencies/cpp/cscore:jni",
+        "@allwpilib//dependencies/java/cscore",
+        "@allwpilib//dependencies/java/ntcore",
+        "@allwpilib//dependencies/cpp/ntcore:jni",
+        "@allwpilib//dependencies/java/wpinet",
+        "@allwpilib//dependencies/cpp/wpinet:jni",
+        "@opencv-cpp//:jni",
+    ],
+)

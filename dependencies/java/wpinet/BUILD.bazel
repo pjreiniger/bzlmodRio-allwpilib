@@ -1,0 +1,13 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+
+java_library(
+    name = "wpinet",
+    visibility = ["//visibility:public"],
+    exports = [
+        artifact("edu.wpi.first.wpinet:wpinet-java"),
+        "@allwpilib//dependencies/java/wpiutil",
+        "@allwpilib//dependencies/cpp/wpiutil:jni",
+        "@allwpilib//dependencies/cpp/wpinet:jni",
+    ],
+)
