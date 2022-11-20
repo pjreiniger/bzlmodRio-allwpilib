@@ -1,0 +1,29 @@
+alias(
+    name = "Glass",
+    actual = "@allwpilib//dependencies/tools/Glass:Glass",
+)
+
+alias(
+    name = "SmartDashboard",
+    actual = "@allwpilib//dependencies/tools/SmartDashboard:SmartDashboard",
+)
+
+alias(
+    name = "PathWeaver",
+    actual = "@allwpilib//dependencies/tools/PathWeaver:PathWeaver",
+)
+
+alias(
+    name = "RobotBuilder",
+    actual = "@allwpilib//dependencies/tools/RobotBuilder:RobotBuilder",
+)
+
+alias(
+    name = "shuffleboard",
+    actual = "@allwpilib//dependencies/tools/shuffleboard:shuffleboard",
+)
+
+alias(
+    name = "OutlineViewer",
+    actual = "@allwpilib//dependencies/tools/OutlineViewer:OutlineViewer",
+)

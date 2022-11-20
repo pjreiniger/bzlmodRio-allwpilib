@@ -1,0 +1,8 @@
+load("@rules_bazelrio//:halsim_defs.bzl", "halsim_cc_binary")
+
+halsim_cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+    # deps = ["@com_github_google_glog//:glog"],
+    halsim_deps = ["@allwpilib//dependencies/cpp/halsim_ws_server"],
+)

@@ -1,0 +1,15 @@
+cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+    # deps = ["@com_github_google_glog//:glog"],
+    deps = ["@allwpilib//dependencies/cpp/cameraserver"],
+)
+
+cc_test(
+    name = "test",
+    srcs = ["test.cpp"],
+    deps = [
+        "@allwpilib//dependencies/cpp/cameraserver",
+        "@googletest//:gtest_main",
+    ],
+)

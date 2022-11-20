@@ -1,0 +1,14 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+java_library(
+    name = "cscore",
+    visibility = ["//visibility:public"],
+    exports = [
+        artifact("edu.wpi.first.cscore:cscore-java"),
+        "@allwpilib//dependencies/cpp/cscore:jni",
+        "@allwpilib//dependencies/cpp/wpiutil:jni",
+        "@allwpilib//dependencies/java/wpiutil",
+        "@wpi-opencv//dependencies/cpp/opencv:jni",
+        "@wpi-opencv//dependencies/java/opencv",
+    ],
+)

@@ -1,0 +1,14 @@
+cc_library(
+    name = "halsim_ws_client",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@allwpilib//dependencies/cpp/hal",
+        "@allwpilib//dependencies/cpp/wpiutil",
+    ] + select({
+        "@bazel_tools//src/conditions:windows": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64//:shared_libs"],
+        "@bazel_tools//src/conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxx86-64//:shared_libs"],
+        "@bazel_tools//src/conditions:darwin": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_osxx86-64//:shared_libs"],
+        # "//constraints/is_roborio:roborio": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxathena//:shared_libs"],
+    }),
+)

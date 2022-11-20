@@ -1,0 +1,22 @@
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+java_library(
+    name = "wpilibNewCommands",
+    visibility = ["//visibility:public"],
+    exports = [
+        artifact("edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java"),
+        "@allwpilib//dependencies/cpp/cscore:jni",
+        "@allwpilib//dependencies/cpp/hal:jni",
+        "@allwpilib//dependencies/cpp/ntcore:jni",
+        "@allwpilib//dependencies/cpp/wpimath:jni",
+        "@allwpilib//dependencies/cpp/wpiutil:jni",
+        "@allwpilib//dependencies/java/cameraserver",
+        "@allwpilib//dependencies/java/cscore",
+        "@allwpilib//dependencies/java/hal",
+        "@allwpilib//dependencies/java/ntcore",
+        "@allwpilib//dependencies/java/wpilibj",
+        "@allwpilib//dependencies/java/wpimath",
+        "@allwpilib//dependencies/java/wpiutil",
+        "@wpi-opencv//dependencies/cpp/opencv:jni",
+    ],
+)
