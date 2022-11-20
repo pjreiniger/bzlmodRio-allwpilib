@@ -14,9 +14,9 @@ def main():
 
     group = get_allwpilib_dependencies()
 
-    # generate_module_project_files(REPO_DIR, group)
-
+    generate_module_project_files(REPO_DIR, group)
     generate_group(output_dir, group)
+
     # generate_maven_cpp_deps(output_dir, group)
 
     # output_file = os.path.join(output_dir, "..", "MODULE.bazel")

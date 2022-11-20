@@ -74,8 +74,8 @@ def get_allwpilib_dependencies():
     _java_dependency(group, "ntcore", dependencies=["wpiutil-java", "wpiutil-cpp", "wpinet-java", "wpinet-cpp", "ntcore-cpp"])
     _java_dependency(group, "cscore", dependencies=["wpiutil-java", "wpiutil-cpp", "wpinet-java", "wpinet-cpp", "cscore-cpp", "opencv-cpp", "opencv-java"])
     _java_dependency(group, "cameraserver", dependencies=["wpiutil-java", "wpiutil-cpp", "cscore-cpp", "cscore-java", "ntcore-java", "ntcore-cpp", "wpinet-java", "wpinet-cpp", "opencv-cpp"])
-    _java_dependency(group, "wpilibj", dependencies=["wpiutil-cpp", "wpiutil-java", "wpimath-cpp", "wpimath-java", "wpinet-cpp", "wpinet-java", "cscore-cpp", "cscore-java", "ntcore-cpp", "ntcore-java", "hal-cpp", "hal-java", "cameraserver-cpp", "cameraserver-java", "opencv-cpp"])
-    _java_dependency(group, "wpilibNewCommands", dependencies=["wpiutil-cpp", "wpiutil-java", "wpimath-cpp", "wpimath-java", "wpinet-cpp", "wpinet-java", "cscore-cpp", "cscore-java", "ntcore-cpp", "ntcore-java", "hal-cpp", "hal-java", "cameraserver-cpp", "cameraserver-java", "opencv-cpp", "wpilibj-java"])
+    _java_dependency(group, "wpilibj", dependencies=["wpiutil-cpp", "wpiutil-java", "wpimath-cpp", "wpimath-java", "wpinet-cpp", "wpinet-java", "cscore-cpp", "cscore-java", "ntcore-cpp", "ntcore-java", "hal-cpp", "hal-java", "cameraserver-java", "opencv-cpp"])
+    _java_dependency(group, "wpilibNewCommands", dependencies=["wpiutil-cpp", "wpiutil-java", "wpimath-cpp", "wpimath-java", "wpinet-cpp", "wpinet-java", "cscore-cpp", "cscore-java", "ntcore-cpp", "ntcore-java", "hal-cpp", "hal-java", "cameraserver-java", "opencv-cpp", "wpilibj-java"])
 
     _halsim_dependency(group, "halsim_ds_socket", dependencies=["hal-cpp", "wpiutil-cpp", "wpinet-cpp"])
     _halsim_dependency(group, "halsim_gui", dependencies=["hal-cpp", "wpiutil-cpp", "wpinet-cpp", "ntcore-cpp"])
