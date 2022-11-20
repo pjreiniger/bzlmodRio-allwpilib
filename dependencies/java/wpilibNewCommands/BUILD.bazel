@@ -1,25 +1,24 @@
 load("@rules_jvm_external//:defs.bzl", "artifact")
 
-
 java_library(
     name = "wpilibNewCommands",
     visibility = ["//visibility:public"],
     exports = [
         artifact("edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java"),
-        "@allwpilib//dependencies/cpp/wpiutil:jni",
-        "@allwpilib//dependencies/java/wpiutil",
-        "@allwpilib//dependencies/cpp/wpimath:jni",
-        "@allwpilib//dependencies/java/wpimath",
-        "@allwpilib//dependencies/cpp/wpinet:jni",
-        "@allwpilib//dependencies/java/wpinet",
         "@allwpilib//dependencies/cpp/cscore:jni",
-        "@allwpilib//dependencies/java/cscore",
-        "@allwpilib//dependencies/cpp/ntcore:jni",
-        "@allwpilib//dependencies/java/ntcore",
         "@allwpilib//dependencies/cpp/hal:jni",
-        "@allwpilib//dependencies/java/hal",
+        "@allwpilib//dependencies/cpp/ntcore:jni",
+        "@allwpilib//dependencies/cpp/wpimath:jni",
+        "@allwpilib//dependencies/cpp/wpinet:jni",
+        "@allwpilib//dependencies/cpp/wpiutil:jni",
         "@allwpilib//dependencies/java/cameraserver",
-        "@opencv-cpp//:jni",
+        "@allwpilib//dependencies/java/cscore",
+        "@allwpilib//dependencies/java/hal",
+        "@allwpilib//dependencies/java/ntcore",
         "@allwpilib//dependencies/java/wpilibj",
+        "@allwpilib//dependencies/java/wpimath",
+        "@allwpilib//dependencies/java/wpinet",
+        "@allwpilib//dependencies/java/wpiutil",
+        "@opencv-cpp//:jni",
     ],
 )

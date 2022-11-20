@@ -2,7 +2,10 @@ cc_library(
     name = "ntcore",
     linkstatic = 1,
     visibility = ["//visibility:public"],
-    deps = ["@allwpilib//dependencies/cpp/wpiutil", "@allwpilib//dependencies/cpp/wpinet"] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"] + select({
+    deps = [
+        "@allwpilib//dependencies/cpp/wpiutil",
+        "@allwpilib//dependencies/cpp/wpinet",
+    ] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"] + select({
         "@bazel_tools//src/conditions:windows": ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsx86-64//:shared_libs"],
         "@bazel_tools//src/conditions:linux_x86_64": ["@ntcore-cpp-linuxx86-64//:shared_libs"],
         "@bazel_tools//src/conditions:darwin": ["@ntcore-cpp-osxx86-64//:shared_libs"],

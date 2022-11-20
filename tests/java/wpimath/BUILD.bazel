@@ -4,12 +4,11 @@
 java_binary(
     name = "main",
     srcs = ["Main.java"],
-    deps = [
-        "@allwpilib//dependencies/java/wpimath",
-    ],
-    main_class = "bazelrio_test.Main",
-    
     jvm_flags = [
         "-Djava.library.path=.",
+    ],
+    main_class = "bazelrio_test.Main",
+    deps = [
+        "@allwpilib//dependencies/java/wpimath",
     ],
 )

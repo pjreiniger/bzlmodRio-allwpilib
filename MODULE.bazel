@@ -11,27 +11,25 @@ bazel_dep(name = "rules_java", version = "5.1.0")
 bazel_dep(name = "rules_python", version = "0.12.0")
 bazel_dep(name = "rules_jvm_external", version = "4.4.2")
 
+bazel_dep(name = "rules_bazelrio", version = "0.0.1")
 bazel_dep(name = "opencv-cpp", version = "4.6.0-2")
 bazel_dep(name = "opencv-java", version = "4.6.0-2")
-
-bazel_dep(name = "rules_bazelrio", version = "0.0.1")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
+        "com.fasterxml.jackson.core:jackson-annotations:2.12.4",
+        "com.fasterxml.jackson.core:jackson-core:2.12.4",
+        "com.fasterxml.jackson.core:jackson-databind:2.12.4",
         "edu.wpi.first.cameraserver:cameraserver-java:2023.1.1-beta-3",
         "edu.wpi.first.cscore:cscore-java:2023.1.1-beta-3",
         "edu.wpi.first.hal:hal-java:2023.1.1-beta-3",
         "edu.wpi.first.ntcore:ntcore-java:2023.1.1-beta-3",
-        "edu.wpi.first.wpilibj:wpilibj-java:2023.1.1-beta-3",
         "edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:2023.1.1-beta-3",
+        "edu.wpi.first.wpilibj:wpilibj-java:2023.1.1-beta-3",
         "edu.wpi.first.wpimath:wpimath-java:2023.1.1-beta-3",
         "edu.wpi.first.wpinet:wpinet-java:2023.1.1-beta-3",
         "edu.wpi.first.wpiutil:wpiutil-java:2023.1.1-beta-3",
-
-        "com.fasterxml.jackson.core:jackson-annotations:2.12.4",
-        "com.fasterxml.jackson.core:jackson-core:2.12.4",
-        "com.fasterxml.jackson.core:jackson-databind:2.12.4",
         "org.ejml:ejml-simple:0.41",
     ],
     repositories = [
@@ -46,7 +44,7 @@ use_repo(
 )
 
 
-setup_allwpilib_dependencies = use_extension("//dependencies:maven_cpp_deps.bzl", "setup_allwpilib_dependencies")
+setup_allwpilib_dependencies = use_extension("//:maven_cpp_deps.bzl", "setup_allwpilib_dependencies")
 use_repo(
     setup_allwpilib_dependencies,
     "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers",

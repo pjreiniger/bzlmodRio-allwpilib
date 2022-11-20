@@ -2,7 +2,13 @@ cc_library(
     name = "cameraserver",
     linkstatic = 1,
     visibility = ["//visibility:public"],
-    deps = ["@allwpilib//dependencies/cpp/wpiutil", "@allwpilib//dependencies/cpp/cscore", "@allwpilib//dependencies/cpp/ntcore", "@allwpilib//dependencies/cpp/wpinet", "@opencv-cpp//:opencv"] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"] + select({
+    deps = [
+        "@allwpilib//dependencies/cpp/wpiutil",
+        "@allwpilib//dependencies/cpp/cscore",
+        "@allwpilib//dependencies/cpp/ntcore",
+        "@allwpilib//dependencies/cpp/wpinet",
+        "@opencv-cpp//:opencv",
+    ] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"] + select({
         "@bazel_tools//src/conditions:windows": ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86-64//:shared_libs"],
         "@bazel_tools//src/conditions:linux_x86_64": ["@cameraserver-cpp-linuxx86-64//:shared_libs"],
         "@bazel_tools//src/conditions:darwin": ["@cameraserver-cpp-osxx86-64//:shared_libs"],
