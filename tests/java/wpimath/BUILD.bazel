@@ -3,7 +3,7 @@
 # bazelrio_java_binary(
 java_binary(
     name = "main",
-    srcs = ["Main.java"],
+    srcs = ["main.java"],
     jvm_flags = [
         "-Djava.library.path=.",
     ],
