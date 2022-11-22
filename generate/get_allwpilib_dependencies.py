@@ -52,7 +52,7 @@ def _executable_tool(maven_dep, artifact_name, group_id="edu.wpi.first.tools", n
 
 def get_allwpilib_dependencies():
     year = "2021"
-    version = f"{year}.2.1"
+    version = f"{year}.3.1"
     opencv_version = "3.4.7-4"
 
     opencv_group = get_opencv_dependencies()
