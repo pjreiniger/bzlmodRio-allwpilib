@@ -1,7 +1,7 @@
 
 module(
     name = "allwpilib",
-    version = "2021.1.2",
+    version = "2021.2.1",
     compatibility_level = 2021,
 )
 
@@ -21,15 +21,15 @@ maven.install(
         "com.fasterxml.jackson.core:jackson-annotations:2.12.4",
         "com.fasterxml.jackson.core:jackson-core:2.12.4",
         "com.fasterxml.jackson.core:jackson-databind:2.12.4",
-        "edu.wpi.first.cameraserver:cameraserver-java:2021.1.2",
-        "edu.wpi.first.cscore:cscore-java:2021.1.2",
-        "edu.wpi.first.hal:hal-java:2021.1.2",
-        "edu.wpi.first.ntcore:ntcore-java:2021.1.2",
-        "edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:2021.1.2",
-        "edu.wpi.first.wpilibOldCommands:wpilibOldCommands-java:2021.1.2",
-        "edu.wpi.first.wpilibj:wpilibj-java:2021.1.2",
-        "edu.wpi.first.wpimath:wpimath-java:2021.1.2",
-        "edu.wpi.first.wpiutil:wpiutil-java:2021.1.2",
+        "edu.wpi.first.cameraserver:cameraserver-java:2021.2.1",
+        "edu.wpi.first.cscore:cscore-java:2021.2.1",
+        "edu.wpi.first.hal:hal-java:2021.2.1",
+        "edu.wpi.first.ntcore:ntcore-java:2021.2.1",
+        "edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:2021.2.1",
+        "edu.wpi.first.wpilibOldCommands:wpilibOldCommands-java:2021.2.1",
+        "edu.wpi.first.wpilibj:wpilibj-java:2021.2.1",
+        "edu.wpi.first.wpimath:wpimath-java:2021.2.1",
+        "edu.wpi.first.wpiutil:wpiutil-java:2021.2.1",
         "org.ejml:ejml-simple:0.41",
     ],
     repositories = [
